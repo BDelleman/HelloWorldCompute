@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://tempuri.org/HW" xmlns="http://tempuri.org/HW" xmlns:ibmSchExtn="http://www.ibm.com/schema/extensions" xmlns:mrm="http://tempuri.org/HW" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/HW" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+                                                                            <xsd:element name="Input" type="xsd:string"/>
+            <xsd:element name="Output" type="xsd:string"/>
+            <xsd:complexType name="Req">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Input"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="Res">
+        <xsd:sequence>
+          <xsd:element ref="mrm:Output"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:complexType name="Error">
+        <xsd:sequence>
+          <xsd:element ref="mrm:ErrCode"/>
+          <xsd:element ref="mrm:ErrMsg"/>
+        </xsd:sequence>
+      </xsd:complexType>
+            <xsd:element name="ErrCode" type="xsd:int"/>
+            <xsd:element name="ErrMsg" type="xsd:string"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="Req" type="mrm:Req"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="Res" type="mrm:Res"/>
+            <xsd:element ibmSchExtn:docRoot="true" name="Error" type="mrm:Error"/>
+        </xsd:schema>

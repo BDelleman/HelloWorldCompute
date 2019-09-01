@@ -1,0 +1,23 @@
+
+
+Importing file: C:\Users\BDELLEM93\IBM\IIBT10\HelloWorldCompute3\HW\HWService.wsdl
+
+Copying source WSDL HWService.wsdl to HWService.wsdl.
+The WSDL import will proceed with bindings HWSOAP_HTTP_Binding.
+Creating wsdl schema document for file:///C:/Users/BDELLEM93/IBM/IIBT10/HelloWorldCompute3/HW/HWService.wsdl.
+Parsing wsdl binding {http://tempuri.org/HW}HWSOAP_HTTP_Binding.
+Parsing wsdl binding input Operation1.
+Parsing wsdl binding output Operation1.
+Parsing wsdl binding fault Operation1_Fault.
+Processing doc style for operation Operation1.
+Populating WSDL schema HWService.xsd.
+Creating file HWService.xsd in the workspace.
+Creating file HWService_InlineSchema2.xsd in the workspace.
+
+Elapsed time processing this message definition file: 0.52 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

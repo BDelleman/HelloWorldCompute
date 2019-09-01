@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="HW" targetNamespace="http://tempuri.org/HW" xmlns="http://tempuri.org/HW" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://tempuri.org/HW" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:documentation>
+    <wsdl:appinfo source="WMQI_APPINFO">
+      <MRWSDLAppInfo imported="true">
+        <generatedXSD location="HWService_InlineSchema2.xsd"/>
+        <binding hasEncoding="false" imported="true" name="HWSOAP_HTTP_Binding" originalBindingStyle="document"/>
+      </MRWSDLAppInfo>
+    </wsdl:appinfo>
+  </wsdl:documentation>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/HW" xmlns:mrm="http://tempuri.org/HW">
+<xsd:include schemaLocation="HWService_InlineSchema2.xsd"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Operation1_in">
+    <wsdl:part element="Req" name="Req"/>
+  </wsdl:message>
+  <wsdl:message name="Operation1_out">
+    <wsdl:part element="Res" name="Res"/>
+  </wsdl:message>
+  <wsdl:message name="Operation1_fault1">
+    <wsdl:part element="Error" name="Error"/>
+  </wsdl:message>
+  <wsdl:portType name="HWPortType">
+    <wsdl:operation name="Operation1">
+      <wsdl:input message="Operation1_in" name="Operation1_Input"/>
+      <wsdl:output message="Operation1_out" name="Operation1_Output"/>
+      <wsdl:fault message="Operation1_fault1" name="Operation1_Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HWSOAP_HTTP_Binding" type="HWPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="Operation1">
+      <soap:operation soapAction=""/>
+      <wsdl:input name="Operation1_Input">
+        <soap:body parts="Req" use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="Operation1_Output">
+        <soap:body parts="Res" use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Operation1_Fault">
+        <soap:fault name="Operation1_Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HWSOAP_HTTP_Service">
+    <wsdl:port binding="HWSOAP_HTTP_Binding" name="HWSOAP_HTTP_Port">
+      <soap:address location="http://localhost:7800/HWSOAP_HTTP_Service"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
